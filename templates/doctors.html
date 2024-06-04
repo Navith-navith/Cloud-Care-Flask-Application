@@ -1,0 +1,40 @@
+{% extends 'layout_patient.html' %}
+
+{% block content %}
+    <h1>Our Doctors</h1>
+    <section class="doctors">
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='doctor1.png') }}" alt="Dr. Surya" class="doctor-image">
+                <h2>Dr. Surya</h2>
+                <p>Dr. Surya, MD (Dermatology), is a specialist in skin issues.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='doctor2.png') }}" alt="Dr. Amoolya" class="doctor-image">
+                <h2>Dr. Amoolya</h2>
+                <p>Dr. Amoolya, MS (Ophthalmology), is an expert in eye-related problems.</p>
+            </div>            
+            <div class="card">
+                <img src="{{ url_for('static', filename='doctor3.png') }}" alt="Dr. Tejas" class="doctor-image">
+                <h2>Dr. Tejas</h2>
+                <p>Dr. Tejas, MD (Oncology), specializes in cancer treatment.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='doctor4.png') }}" alt="Dr. Rishek" class="doctor-image">
+                <h2>Dr. Rishek</h2>
+                <p>Dr. Rishek, MBBS, specializes in the treatment of normal fever.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='doctor5.png') }}" alt="Dr. Sanvi" class="doctor-image">
+                <h2>Dr. Sanvi</h2>
+                <p>Dr. Sanvi, MBBS, is a general medical practitioner.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='doctor6.png') }}" alt="Dr. Darshath" class="doctor-image">
+                <h2>Dr. Darshath</h2>
+                <p>Dr. Darshath, MD (Emergency Medicine), specializes in emergency medical care.</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+{% endblock %}

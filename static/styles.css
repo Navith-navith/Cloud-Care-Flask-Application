@@ -1,0 +1,216 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+header h1
+{
+    margin-right: 40%;
+    font-size: 50px;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    margin: 0;
+}
+
+.center-line {
+    width: 50%; /* Line spans 75% of the screen width, starting from 25% */
+    height: 2px; /* Adjust the thickness as needed */
+    background-color: black; /* Adjust the color as needed */
+    position: relative;
+    left: 25%; /* Move the line to start at 25% */
+    right: 25%;
+}
+h1 
+{
+    margin-left: 25px;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    /* Adjusted font size */
+}
+
+header ul li a:hover {
+    color: #ff9900;
+    /* Changed text color on hover */
+}
+
+nav {
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Ensure items are equidistant */
+}
+
+nav ul li {
+    flex: 1; /* Make each item take up equal space */
+    text-align: center; /* Center text within each item */
+}
+
+nav ul li a {
+    display: block; /* Ensure the link takes up the full height of the item */
+    padding: 10px 0; /* Reduced padding */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px; /* Adjusted font size */
+}
+
+nav ul li a:hover {
+    color: #ff9900; /* Changed text color on hover */
+}
+
+main {
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+.flashes {
+    list-style: none;
+    padding: 0;
+}
+
+.flashes li {
+    background: #ffdddd;
+    border: 1px solid #ff5c5c;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.hero {
+    background-image: radial-gradient(circle, #6a3232, #040534, #000000);
+    color: #ffffff; /* White */
+    padding: 30px 0;
+    text-align: center;
+}
+.info h2
+{
+    text-align: center;
+    font-size: 35px;
+    color: #2799ad;
+}
+.info p
+{
+    text-align: center;
+    font-family:cursive;
+    font-size: 25px;
+    margin: 70px;
+}
+.gallery {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    margin-bottom: 20px; /* Add some space between the gallery and other sections */
+}
+.gallery {
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    animation: marquee 15s linear infinite;
+}
+
+.image-container img {
+    flex: 0 0 auto;
+    max-width: calc(100% - 10px); /* Adjust the gap size here */
+    margin-right: 10px; /* Adjust the gap size here */
+    height: auto;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.contact-page
+{
+    background-color: #35424a;
+    text-align: center;
+    color: #ffbaab;
+    margin-bottom: 70px;
+}
+footer {
+    background-color: #35424a; /* Dark blue-gray */
+    color: #ffffff; /* White */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

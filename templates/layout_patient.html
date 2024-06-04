@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout_patient.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Hospital Logo">
+            </div>
+            <h1>CARE CLOUD</h1>
+        </header>
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('patient_login') }}">Home</a></li>
+                <li><a href="{{ url_for('create_appointment') }}">Book Appointment</a></li>
+                <li><a href="{{ url_for('about') }}">Facilities</a></li>
+                <li><a href="{{ url_for('doctors') }}">Doctors</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('logout') }}" style="color: red;">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        
+    </div>
+    <footer>
+        <p>&copy; 2024 CARE CLOUD. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Flask
+Jinja2
+Werkzeug
+itsdangerous
+MarkupSafe
+pygame
+reportlab
+qrcode
+pillow
+email-validator
+python-dotenv
+gunicorn

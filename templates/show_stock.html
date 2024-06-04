@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Stock Records</h2>
+
+{% if records %}
+    <table>
+        <tr>
+            <th>Batch Number</th>
+            <th>Name</th>
+            <th>Manufacturer</th>
+            <th>Date of Manufacture</th>
+            <th>Date of Expiry</th>
+            <th>Quantity</th>
+            <th>Sold</th>
+            <th>Balance</th>
+            <th>Cost per Unit</th>
+            <th>Actions</th>
+        </tr>
+        {% for record in records %}
+        {% if record['balance'] <= 100 %}
+            <tr style="background-color: lightcoral;">
+        {% else %}
+            <tr style="background-color: lightgreen;">
+        {% endif %}
+                <td>{{ record['batch_no'] }}</td>
+                <td>{{ record['name'] }}</td>
+                <td>{{ record['manuf'] }}</td>
+                <td>{{ record['date_man'] }}</td>
+                <td>{{ record['date_exp'] }}</td>
+                <td>{{ record['quantity'] }}</td>
+                <td>{{ record['sell'] }}</td>
+                <td>{{ record['balance'] }}</td>
+                <td>{{ record['cost_unit'] }} Rs</td>
+                <td>
+                    <form method="post" action="{{url_for('delete_medicine', batch_no=record.batch_no)}}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No medicines in stock. Import some medicines to see the stock.</p>
+{% endif %}
+<br><br>
+{% endblock %}

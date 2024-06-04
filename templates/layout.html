@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+    <style>
+        .alert-success {
+            background-color: #d4edda; /* Set the desired green color */
+            color: #155724; /* Text color for success alerts */
+            border-color: #c3e6cb; /* Border color for success alerts */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Hospital Logo">
+            </div>
+            <h1>CARE CLOUD</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('pharmacy_home') }}">Home</a></li>
+                <li><a href="{{ url_for('add_medicine') }}">Add Medicine</a></li>
+                <li><a href="{{ url_for('search_by_name') }}">Search by Name</a></li>
+                <li><a href="{{ url_for('search_by_manufacturer') }}">Search by Manufacturer</a></li>
+                <li><a href="{{ url_for('update_cost') }}">Update Cost</a></li>
+                <li><a href="{{ url_for('sell_medicine') }}">Sell Medicine</a></li>
+                <li><a href="{{ url_for('show_stock') }}">Show Stock</a></li>
+                <li><a href="{{ url_for('show_dispose') }}">Show Dispose</a></li>
+                <li><a href="{{ url_for('logout') }}" style="color:red;">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {% if 'success' in message %}
+                            <div class="alert alert-success mt-3" role="alert">
+                                {{ message }}
+                            </div>
+                        {% elif 'danger' in message %}
+                            <div class="alert alert-danger mt-3" role="alert">
+                                {{ message }}
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info mt-3" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 CARE CLOUD. All rights reserved.</p>
+    </footer>
+</body>
+</html>

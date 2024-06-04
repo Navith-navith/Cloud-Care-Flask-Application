@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2 class="form-title centered">Sell Medicine</h2>
+    <form method="post" action="{{ url_for('add_to_cart') }}">
+        <label for="name">Medicine Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="quantity">Quantity to Sell:</label>
+        <input type="number" id="quantity" name="quantity" required><br>
+        <button type="submit">Add to Cart</button>
+    </form>
+    <br>
+    <form method="post" action="{{ url_for('generate_bill') }}">
+        <button type="submit" html >Generate Bill</button>
+    </form>
+    <br>
+
+    <form method="post" action="{{ url_for('cancel_bill') }}">
+        <button type="submit">Cancel Bill</button>
+    </form>
+    <br>
+
+    {% if cart %}
+        <h3>Cart</h3>
+        <ul>
+            {% for item in cart %}
+                <li>{{ item.name }} - {{ item.quantity }} units 
+                    <form method="post" action="{{ url_for('cancel_item', name=item.name) }}" style="display:inline;">
+                        <button type="submit" class="cart-cancel-button">Cancel</button>
+                    </form>
+                    <br><br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if qr_code %}
+        <h3>QR Code for Payment</h3>
+        <img src="{{ qr_code }}" alt="QR Code">
+        <h3 class="green-text">Total Amount: {{ total_amount }}</h3>
+    </div>
+    {% endif %}
+    <br><br>
+{% endblock %}

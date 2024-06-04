@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Disposed Records</h2>
+
+{% if records %}
+    <table>
+        <tr>
+            <th>Batch Number</th>
+            <th>Name</th>
+            <th>Date of Expiry</th>
+            <th>Disposed Amount</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record['batch_no'] }}</td>
+            <td>{{ record['name'] }}</td>
+            <td>{{ record['date_exp'] }}</td>
+            <td>{{ record['quantity'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No medicines have been disposed.</p>
+{% endif %}
+<br><br>
+{% endblock %}

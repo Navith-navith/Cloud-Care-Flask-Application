@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- <h2>Add Medicine</h2> -->
+    <div class="form-container">
+        <h2 class="form-title">Add Medicine</h2>
+        <form method="post">
+    <form method="post">
+        <label for="batch_no">Batch Number:</label>
+        <input type="text" id="batch_no" name="batch_no" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="manuf">Manufacturer:</label>
+        <input type="text" id="manuf" name="manuf" required><br><br>
+
+        <label for="date_man">Date of Manufacture:</label>
+        <input type="date" id="date_man" name="date_man" required><br><br>
+
+        <label for="date_exp">Date of Expiry:</label>
+        <input type="date" id="date_exp" name="date_exp" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <label for="cost_unit">Cost per Unit:</label>
+        <input type="number" id="cost_unit" name="cost_unit" step="0.01" required><br><br>
+
+        <input type="submit" value="Add Medicine">
+    </form>
+</div>
+<br><br>
+{% endblock %}

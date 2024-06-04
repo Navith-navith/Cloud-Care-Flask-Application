@@ -1,0 +1,34 @@
+{% extends 'layout_patient.html' %}
+
+{% block content %}
+    <h1>Our Doctors</h1>
+    <section class="doctors">
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='facility1.png') }}" alt="machine1" class="doctor-image">
+                <h2>Blood Pressure</h2>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='facility2.jpg') }}" alt="machine2" class="doctor-image">
+                <h2>MRI Scanning</h2>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='facility3.jpg') }}" alt="machine3" class="doctor-image">
+                <h2>Cancer Treatment</h2>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='facility4.png') }}" alt="machine4" class="doctor-image">
+                <h2>Baby Care</h2>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='facility5.png') }}" alt="machine5" class="doctor-image">
+                <h2>Eye Treatments</h2>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='facility6.png') }}" alt="machine6" class="doctor-image">
+                <h2>Dental Checkup</h2>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+{% endblock %}

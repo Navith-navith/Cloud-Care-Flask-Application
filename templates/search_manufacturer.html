@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2 class="form-title">Search Medicine by Manufacturer</h2>
+<form method="post">
+    <label for="manufacturer">Manufacturer:</label>
+    <input type="text" id="manufacturer" name="manufacturer" required><br>
+    <button type="submit">Search</button>
+</form>
+
+{% if request.method == 'POST' %}
+    {% if records %}
+        <h3>Medicines by {{ request.form['manufacturer'] }}</h3>
+        <ul>
+            {% for record in records %}
+                <li>{{ record['name'] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No medicines found for "{{ request.form['manufacturer'] }}".</p>
+    {% endif %}
+{% endif %}
+</div>
+<br><br>
+{% endblock %}

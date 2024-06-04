@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pharmacy-management-system
+    env: python
+    buildCommand: |
+      sudo apt-get update
+      sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+      pip install -r requirements.txt
+    startCommand: |
+      export SDL_AUDIODRIVER=dummy
+      export SDL_VIDEODRIVER=dummy
+      gunicorn app:app

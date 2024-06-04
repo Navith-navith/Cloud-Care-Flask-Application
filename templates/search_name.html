@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2 class="form-title">Search Medicine by Name</h2>
+<form method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <button type="submit">Search</button>
+</form>
+
+{% if request.method == 'POST' %}
+    {% if records %}
+        <h3>Search Results</h3>
+        {% for record in records %}
+            <p>Batch Number: {{ record['batch_no'] }}</p>
+            <p>Name: {{ record['name'] }}</p>
+            <p>Manufacturer: {{ record['manuf'] }}</p>
+            <p>Date of Manufacture: {{ record['date_man'] }}</p>
+            <p>Date of Expiry: {{ record['date_exp'] }}</p>
+            <p>Quantity Imported: {{ record['quantity'] }}</p>
+            <p>Cost per Unit: {{ record['cost_unit'] }} Rs</p>
+            <hr><hr>
+        {% endfor %}
+    {% else %}
+        <p>No medicines found for name "{{ request.form['name'] }}" Try Again !!.</p>
+    {% endif %}
+{% endif %}
+</div>
+<br><br>
+{% endblock %}

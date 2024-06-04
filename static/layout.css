@@ -1,0 +1,432 @@
+
+/* styles.css */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px; /* Adjusted font size */
+}
+
+header ul li a:hover {
+    color: #ff9900; /* Changed text color on hover */
+}
+header h1
+{
+    margin-right: 40%;
+    font-size: 50px;
+}
+
+nav {
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px; /* Added gap between header and nav bar */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Ensure items are equidistant */
+}
+
+nav ul li {
+    flex: 1; /* Make each item take up equal space */
+    text-align: center; /* Center text within each item */
+}
+
+nav ul li a {
+    display: block; /* Ensure the link takes up the full height of the item */
+    padding: 10px 0; /* Reduced padding */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px; /* Adjusted font size */
+}
+
+nav ul li a:hover {
+    color: #ff9900; /* Changed text color on hover */
+}
+.container main-content .contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.hero {
+    background-image: radial-gradient(circle, #6a3232, #040534, #000000);
+    color: #ffffff; /* White */
+    padding: 30px 0;
+    text-align: center;
+}
+.gallery {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    margin-bottom: 20px; /* Add some space between the gallery and other sections */
+}
+main {
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+.flashes {
+    list-style: none;
+    padding: 0;
+}
+
+.flashes li {
+    background: #ffdddd;
+    border: 1px solid #ff5c5c;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.info h2
+{
+    text-align: center;
+    font-size: 35px;
+    color: #2799ad;
+}
+.info p
+{
+    text-align: center;
+    font-family:cursive;
+    font-size: 25px;
+    margin: 70px;
+}
+.contact-page
+{
+    background-color: #35424a;
+    text-align: center;
+    color: #ffbaab;
+    margin-bottom: 70px;
+}
+footer {
+    background-color: #35424a; /* Dark blue-gray */
+    color: #ffffff; /* White */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* styles.css */
+
+/* Existing styles... */
+
+/* New styles for the form */
+
+
+form h2 {
+    color: #35424a;
+    margin-bottom: 20px;
+}
+
+form label {
+    color: #35424a;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #e8491d;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ff9900;
+}
+
+/* Existing styles... */
+
+/* New styles for the form */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
+}
+
+.form-title {
+    color: #e8491d; /* Add color to the title */
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left; /* Reset text alignment for form elements */
+}
+
+/* End of new styles for the form */
+
+/* Existing styles... */
+
+/* New styles for the form */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
+}
+
+.form-title {
+    color: #35424a; /* Change title color */
+    margin-bottom: 20px;
+}
+
+.result-title {
+    color: #e8491d; /* Change result title color */
+}
+
+.result-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-list li {
+    color: #35424a; /* Change result item color */
+}
+
+.no-result {
+    color: #e8491d; /* Change no result message color */
+}
+
+/* End of new styles for the form */
+/* Existing styles... */
+
+/* New styles for the form */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
+}
+
+.form-title {
+    color: #35424a; /* Change title color */
+    margin-bottom: 20px;
+}
+
+.result-title {
+    color: #e8491d; /* Change result title color */
+}
+
+.record-info {
+    color: #35424a; /* Change record info color */
+}
+
+.no-result {
+    color: #e8491d; /* Change no result message color */
+}
+
+/* End of new styles for the form */
+/* styles.css */
+
+/* Existing styles... */
+
+/* New styles for the sell medicine page */
+
+/* Form container */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
+}
+
+/* Form title */
+.form-title {
+    color: #35424a; /* Change title color */
+    margin-bottom: 20px;
+}
+
+/* Form inputs */
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button[type="submit"] {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff9900;
+}
+
+/* QR Code */
+.qr-code-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qr-code-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the QR code */
+}
+/* styles.css */
+
+/* Existing styles... */
+
+/* New styles for the sell medicine page */
+.cancel-button {
+    font-size: 12px; /* Adjust the font size as needed */
+    padding: 5px 10px; /* Adjust padding to fit the text */
+}
+
+.cart-cancel-button
+{
+    font-size: 10px; /* Adjust the font size as needed */
+    padding: 5px 10px;
+}
+/* End of new styles for the sell medicine page */
+
+.green-text {
+    color: green;
+}
+/* End of new styles for the sell medicine page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/* styles.css */
+
+/* Existing styles... */
+
+/* New styles for the update cost form */
+.update-cost-submit {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-cost-submit h2 {
+    color: #35424a;
+    margin-bottom: 20px;
+}
+
+.update-cost-submit label {
+    color: #35424a;
+    font-weight: bold;
+}
+
+.update-cost-submit input[type="text"],
+.update-cost-submit input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.update-cost-submit button[type="submit"] {
+    background-color: #e8491d;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.update-cost-submit button[type="submit"]:hover {
+    background-color: #ff9900;
+}
+/* End of new styles for the update cost form */
+
+/* Existing styles... */

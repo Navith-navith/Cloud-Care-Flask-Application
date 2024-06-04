@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout_patient.css') }}">
+    <script>
+        function validateForm() {
+            var description = document.getElementById('description').value;
+            var wordCount = description.trim().split(/\s+/).length;
+
+            if (wordCount > 50) {
+                alert('Problem Description should not exceed 50 words. Currently, it has ' + wordCount + ' words.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    {% extends 'layout_patient.html' %}
+
+    {% block content %}
+    <div class="container mt-5">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div>
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} mt-3">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="container main-content">
+        <h1>Create Appointment</h1>
+        <form action="{{ url_for('create_appointment') }}" method="POST" onsubmit="return validateForm();">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" class="form-control" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" name="weight" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="disease">Disease:</label>
+                <select id="disease" name="disease" class="form-control" required>
+                    <option value="normal_fever">Normal Fever</option>
+                    <option value="skin_issue">Skin Issue</option>
+                    <option value="emergency">Emergency</option>
+                    <option value="eye_related">Eye Related</option>
+                    <option value="cancer">Cancer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Problem Description:</label>
+                <textarea id="description" name="description" rows="4" cols="50" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Appointment</button>
+        </form>
+    </div>
+    <br><br><br><br>
+    {% endblock %}
+</body>
+</html>

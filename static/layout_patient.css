@@ -1,0 +1,468 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+header h1
+{
+    margin-right: 40%;
+    font-size: 50px;
+}
+h1 
+{
+    margin-left: 25px;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    /* Adjusted font size */
+}
+
+header ul li a:hover {
+    color: #ff9900;
+    /* Changed text color on hover */
+}
+
+nav {
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    /* Added gap between header and nav bar */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* Ensure items are equidistant */
+}
+
+nav ul li {
+    flex: 1;
+    /* Make each item take up equal space */
+    text-align: center;
+    /* Center text within each item */
+}
+
+nav ul li a {
+    display: block;
+    /* Ensure the link takes up the full height of the item */
+    padding: 10px 0;
+    /* Reduced padding */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    /* Adjusted font size */
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+    /* Changed text color on hover */
+}
+
+.main-content {
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=number],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50px * 6));
+        /* Adjusted based on image width and count */
+    }
+}
+
+/* layout_patient.css */
+
+.box-container,
+.card-container {
+    display: flex;
+    /* Use flexbox to create a row layout */
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next line */
+    justify-content: space-around;
+    /* Center-align cards */
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Set the width of each card to one-third of the container width with some margin */
+    margin: 10px;
+    /* Add some margin between cards */
+    padding: 20px;
+    background: rgba(182, 198, 255, 0.159);
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    /* Include padding and border in the width calculation */
+    position: relative;
+    /* Ensure position context for absolute positioning */
+    overflow: hidden;
+    /* Hide overflowing content */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.1);
+    /* Grow the card on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Add shadow effect */
+    z-index: 1;
+    /* Ensure the hovered card is on top */
+}
+
+.card img {
+    width: 270px;
+    /* Set the width of the image */
+    height: 150px;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    /* Add some space between the image and the text */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    /* Grow the image on hover */
+}
+
+.card .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background */
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transform: translateY(-100%);
+    /* Start above the card */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.card:hover .info {
+    transform: translateY(0);
+    /* Bring the info box down on hover */
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container main-content .contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.hero {
+    background-image: radial-gradient(circle, #6a3232, #040534, #000000);
+    color: #ffffff; /* White */
+    padding: 30px 0;
+    text-align: center;
+}
+.gallery {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    margin-bottom: 20px; /* Add some space between the gallery and other sections */
+}
+.gallery {
+    overflow: hidden;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+
+.image-container {
+    display: flex;
+    animation: marquee 15s linear infinite;
+}
+
+.image-container img {
+    flex: 0 0 auto;
+    max-width: calc(100% - 10px); /* Adjust the gap size here */
+    margin-right: 10px; /* Adjust the gap size here */
+    height: auto;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-control textarea {
+    resize: vertical;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+.doctor-image {
+    height: 10px;
+    display: block;
+    margin: 0 auto 16px; /* Center the image and add spacing below */
+}
+.card h2 {
+    text-align: center;
+    
+}
+/* Facilities Section */
+.facilities {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 95%;
+    background-color: #ffffff;
+    /* White */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.facility-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: space-around;
+    /* Align items with space around them */
+    gap: 20px;
+    /* Add some space between facility cards */
+}
+
+.facility {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;
+    background: rgb(182, 198, 255);
+}
+
+.facility img {
+    width: 100%;
+    /* Make images fill their container */
+    border-radius: 8px;
+    /* Add rounded corners to images */
+    margin-bottom: 10px;
+    /* Add some space below images */
+}
+.info h2
+{
+    text-align: center;
+    font-size: 35px;
+    color: #2799ad;
+}
+.info p
+{
+    text-align: center;
+    font-family:cursive;
+    font-size: 25px;
+    margin: 70px;
+}
+.contact-page
+{
+    background-color: #35424a;
+    text-align: center;
+    color: #ffbaab;
+    margin-bottom: 70px;
+}
+footer {
+    background-color: #35424a; /* Dark blue-gray */
+    color: #ffffff; /* White */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

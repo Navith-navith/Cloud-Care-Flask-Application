@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+</head>
+<body>
+    <h1>Welcome to the Pharmacy Management System</h1>
+
+    <div>
+        <h2>Login</h2>
+        <form action="{{ url_for('register') }}" method="POST">
+            <label for="username">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="username">Email/User Name:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="role">Role:</label>
+            <select name="typeof" id="typeof">
+                <option value="pharmacist">Pharmacist</option>
+                <option value="doctor">Doctor</option>
+            </select><br><br>
+            <input type="submit" value="register">
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

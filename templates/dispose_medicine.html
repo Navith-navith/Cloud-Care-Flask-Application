@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Dispose Expired Medicine</h1>
+<form method="post">
+    <label for="batch_no">Batch Number:</label>
+    <input type="text" id="batch_no" name="batch_no" required><br>
+    <label for="name">Medicine Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="date_exp">Date of Expiry:</label>
+    <input type="date" id="date_exp" name="date_exp" required><br>
+    <label for="amount"><b>Note: Balance Amount will be disposed.</b></label>
+    <button type="submit">Dispose</button>
+</form>
+{% endblock %}
